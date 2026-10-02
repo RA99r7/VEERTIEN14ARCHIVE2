@@ -100,6 +100,15 @@
     </p>
 
 </section>
+<!-- SEARCH ANGGOTA -->
+<div class="member-search">
+    <input
+        type="text"
+        id="memberSearch"
+        placeholder="🔍 Cari nama anggota..."
+        autocomplete="off"
+    >
+</div>
 
 <!-- ANGGOTA -->
 <section class="members">
@@ -111,11 +120,12 @@
         class="member-photo"
         src="anggota1.jpeg"
         alt="Foto Adang"
-        onclick="openMemberLightbox(
-        'anggota1.jpeg',
-        'Adang',
-        ''
-    )">
+        onclick="openMemberProfile(
+    'Ramdan',
+    'Panggilan Adang',
+    'https://www.instagram.com/ramdhani_ra9?stkn=MTRqeWZrMjBnbng3MA==',
+    'anggota1.jpeg'
+)">
 
     <h2>
         Adang
@@ -136,7 +146,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music1', this)"
+            onclick="event.stopPropagation(); playMusic('music1', this)"
         >
             ▶ Play
         </button>
@@ -153,11 +163,14 @@
         class="member-photo"
         src="anggota2.jpeg"
         alt="Foto Kenan"
-        onclick="openMemberLightbox(
-        'anggota2.jpeg',
-        'Kenan',
-        ''
-    )">
+        data-name="Kenan"
+
+onclick="openMemberProfile(
+    'Kenan',
+    'Panggilan Kenan',
+    'https://www.instagram.com/kkenanachmd?stkn=MThiYjF5aW9rbTc1eg==',
+    'anggota2.jpeg'
+)">
 
     <h2>
         Kenan
@@ -176,7 +189,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music2', this)"
+            onclick="event.stopPropagation(); playMusic('music2', this)"
         >
             ▶ Play
         </button>
@@ -193,11 +206,14 @@
         class="member-photo"
         src="anggota3.jpeg"
         alt="Foto Akis"
-        onclick="openMemberLightbox(
-        'anggota3.jpeg',
-        'Akis',
-        ''
-    )">
+        data-name="Akis"
+
+onclick="openMemberProfile(
+    'Akis',
+    'Panggilan Akis',
+    'https://www.instagram.com/akiss_07?stkn=bWM0Mm43N2JjdGRk',
+    'anggota3.jpeg'
+)">
 
     <h2>
         Akis
@@ -216,7 +232,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music3', this)"
+            onclick="event.stopPropagation(); playMusic('music3', this)"
         >
             ▶ Play
         </button>
@@ -233,11 +249,14 @@
         class="member-photo"
         src="anggota4.jpeg"
         alt="Foto Epul"
-        onclick="openMemberLightbox(
-        'anggota4.jpeg',
-        'Epul',
-        ''
-    )">
+        data-name="Epul"
+
+onclick="openMemberProfile(
+    'Haqi',
+    'Panggilan Epul',
+    'https://www.instagram.com/mhmdpq11_____?stkn=bmliN3o1YndhcTI1',
+    'anggota4.jpeg'
+)">
 
     <h2>
         Epul
@@ -258,7 +277,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music4', this)"
+            onclick="event.stopPropagation(); playMusic('music4', this)"
         >
             ▶ Play
         </button>
@@ -275,11 +294,14 @@
         class="member-photo"
         src="anggota5.jpeg"
         alt="Foto Fajar/Ajay"
-        onclick="openMemberLightbox(
-        'anggota5.jpeg',
-        'Fajar/ajay',
-        ''
-    )">
+        data-name="Fajar/Ajay"
+
+onclick="openMemberProfile(
+    'Fajar',
+    'Ajay',
+    'https://www.instagram.com/_paajhr?stkn=emt5cW82NjU3dmx0',
+    'anggota5.jpeg'
+)">
 
     <h2>
         Fajar/ajay 
@@ -300,7 +322,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music5', this)"
+            onclick="event.stopPropagation(); playMusic('music5', this)"
         >
             ▶ Play
         </button>
@@ -317,11 +339,14 @@
         class="member-photo"
         src="anggota6.jpeg"
         alt="Foto Raya"
-        onclick="openMemberLightbox(
-        'anggota6.jpeg',
-        'Raya',
-        ''
-    )">
+        data-name="Raya"
+
+onclick="openMemberProfile(
+    'Raya',
+    'Panggilan Raya',
+    'https://www.instagram.com/r4yya_d?stkn=ZzdyZDVjNGp6ZWV6',
+    'anggota6.jpeg'
+)">
 
     <h2>
         Raya
@@ -342,7 +367,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music6', this)"
+            onclick="event.stopPropagation(); playMusic('music6', this)"
         >
             ▶ Play
         </button>
@@ -359,11 +384,14 @@
         class="member-photo"
         src="anggota7.jpeg"
         alt="Foto Jobin"
-        onclick="openMemberLightbox(
-        'anggota7.jpeg',
-        'Jobin',
-        ''
-    )">
+        data-name="Jobin"
+
+onclick="openMemberProfile(
+    'Fakhri',
+    'Panggilan Jobin',
+    'https://www.instagram.com/abqrii.k?stkn=MWpmZDdpNXJydGRsdA==',
+    'anggota7.jpeg'
+)">
 
     <h2>
         Jobin
@@ -384,7 +412,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music7', this)"
+            onclick="event.stopPropagation(); playMusic('music7', this)"
         >
             ▶ Play
         </button>
@@ -401,11 +429,14 @@
         class="member-photo"
         src="anggota8.jpeg"
         alt="Foto Jon"
-        onclick="openMemberLightbox(
-        'anggota8.jpeg',
-        'Jon',
-        ''
-    )">
+        data-name="Jon"
+
+onclick="openMemberProfile(
+    'Syahran',
+    'Panggilan Jon',
+    'https://www.instagram.com/syhrnvn?stkn=ODdkczAzbXQya3B3',
+    'anggota8.jpeg'
+)">
 
     <h2>
         Jon
@@ -426,7 +457,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music8', this)"
+            onclick="event.stopPropagation(); playMusic('music8', this)"
         >
             ▶ Play
         </button>
@@ -443,11 +474,14 @@
         class="member-photo"
         src="anggota9.jpeg"
         alt="Foto Abil"
-        onclick="openMemberLightbox(
-        'anggota9.jpeg',
-        'Abil',
-        ''
-    )">
+        data-name="Abil"
+
+onclick="openMemberProfile(
+    'Abil',
+    'Panggilan Abil',
+    'https://www.instagram.com/abilahmadalghifari___?stkn=dWlnbmk4YnllYTkx',
+    'anggota9.jpeg'
+)">
 
     <h2>
         Abil
@@ -466,7 +500,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music9', this)"
+            onclick="event.stopPropagation(); playMusic('music9', this)"
         >
             ▶ Play
         </button>
@@ -483,11 +517,14 @@
         class="member-photo"
         src="anggota10.jpeg"
         alt="Foto Agha"
-        onclick="openMemberLightbox(
-        'anggota10.jpeg',
-        'Agha',
-        ''
-    )">
+        data-name="Agha"
+
+onclick="openMemberProfile(
+    'Agha',
+    'Panggilan Agha',
+    'https://www.instagram.com/aghafatih05?stkn=MXIxdnM2OXIzbGZtcg==',
+    'anggota10.jpeg'
+)">
 
     <h2>
       Agha
@@ -508,7 +545,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music10', this)"
+            onclick="event.stopPropagation(); playMusic('music10', this)"
         >
             ▶ Play
         </button>
@@ -525,11 +562,14 @@
         class="member-photo"
         src="anggota11.jpeg"
         alt="Foto Raditya"
-        onclick="openMemberLightbox(
-        'anggota11.jpeg',
-        'Raditya',
-        ''
-    )">
+        data-name="Raditya"
+
+onclick="openMemberProfile(
+    'Raditya',
+    'Panggilan Adit',
+    'https://www.instagram.com/askiaaaal?stkn=NGg4bGcxcjhoNHNu',
+    'anggota11.jpeg'
+)">
 
     <h2>
         Raditya
@@ -548,7 +588,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music11', this)"
+            onclick="event.stopPropagation(); playMusic('music11', this)"
         >
             ▶ Play
         </button>
@@ -565,11 +605,14 @@
         class="member-photo"
         src="anggota12.jpeg"
         alt="Foto Rayyan"
-        onclick="openMemberLightbox(
-        'anggota12.jpeg',
-        'Rayyan',
-        ''
-    )">
+        data-name="Rayyan"
+
+onclick="openMemberProfile(
+    'Rayyan',
+    'Panggilan Rayyan',
+    'https://www.instagram.com/yan.rmdhn__?stkn=MXNuaGw3dGZhMzFhdw==',
+    'anggota12.jpeg'
+)">
 
     <h2>
         Rayyan
@@ -588,7 +631,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music12', this)"
+            onclick="event.stopPropagation(); playMusic('music12', this)"
         >
             ▶ Play
         </button>
@@ -605,11 +648,14 @@
         class="member-photo"
         src="anggota13.jpeg"
         alt="Foto Fardhan"
-        onclick="openMemberLightbox(
-        'anggota13.jpeg',
-        'Fardhan',
-        ''
-    )">
+        data-name="Fardhan"
+
+onclick="openMemberProfile(
+    'Fardhan',
+    'Panggilan Fardhan',
+    'https://www.instagram.com/fardhanrifkial?stkn=MXRva3VhZ2lkdzRieA==',
+    'anggota13.jpeg'
+)">
 
     <h2>
         Fardhan
@@ -628,7 +674,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music13', this)"
+            onclick="event.stopPropagation(); playMusic('music13', this)"
         >
             ▶ Play
         </button>
@@ -645,11 +691,14 @@
         class="member-photo"
         src="anggota14.jpeg"
         alt="Foto Rezaldy/dika"
-        onclick="openMemberLightbox(
-            'anggota14.jpeg',
-            'Rezaldy/dika',
-            ''
-        )"
+        data-name="Rezaldy/Dika"
+
+onclick="openMemberProfile(
+    'Rezaldy',
+    'Dika',
+    'https://www.instagram.com/zzzallllllll?stkn=MWNjZmE0YTlyZnB0ZA==',
+    'anggota14.jpeg'
+)"
     >
 
     <h2>
@@ -669,7 +718,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music14', this)"
+            onclick="event.stopPropagation(); playMusic('music14', this)"
         >
             ▶ Play
         </button>
@@ -686,11 +735,14 @@
         class="member-photo"
         src="anggota15.jpeg"
         alt="Foto Kila"
-        onclick="openMemberLightbox(
-        'anggota15.jpeg',
-        'Kila',
-        ''
-    )">
+        data-name="Kila"
+
+onclick="openMemberProfile(
+    'Kila',
+    'Panggilan Kila',
+    'https://www.instagram.com/fshya_archm?stkn=MTZ6NjYzem0wdmIxdA==',
+    'anggota15.jpeg'
+)">
 
     <h2>
         Kila
@@ -711,7 +763,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music15', this)"
+            onclick="event.stopPropagation(); playMusic('music15', this)"
         >
             ▶ Play
         </button>
@@ -728,12 +780,14 @@
         class="member-photo"
         src="anggota16.jpeg"
         alt="Foto Eji"
-        onclick="openMemberLightbox(
-            'anggota16.jpeg',
-            'Eji',
-            ''
-        )"
-    >
+        data-name="Eji"
+
+onclick="openMemberProfile(
+    'Eji',
+    'Panggilan Eji',
+    'https://www.instagram.com/noctrezz?stkn=OWplaGJ2dnU2eHA5',
+    'anggota16.jpeg'
+)"  >
 
     <h2>
         Eji
@@ -752,7 +806,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music16', this)"
+            onclick="event.stopPropagation(); playMusic('music16', this)"
         >
             ▶ Play
         </button>
@@ -769,12 +823,14 @@
         class="member-photo"
         src="anggota17.jpeg"
         alt="Foto Evan"
-        onclick="openMemberLightbox(
-            'anggota17.jpeg',
-            'Evan',
-            ''
-        )"
-    >
+        data-name="Evan"
+
+onclick="openMemberProfile(
+    'Evan',
+    'Panggilan Evan',
+    'https://www.instagram.com/v4nndhikaa__?stkn=Nnk2MTl4YmZkd3dv',
+    'anggota17.jpeg'
+)"  >
 
     <h2>
         Evan
@@ -793,7 +849,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music17', this)"
+            onclick="event.stopPropagation(); playMusic('music17', this)"
         >
             ▶ Play
         </button>
@@ -810,12 +866,14 @@
         class="member-photo"
         src="anggota18.jpeg"
         alt="Foto Rafka"
-        onclick="openMemberLightbox(
-            'anggota18.jpeg',
-            'Rafka',
-            ''
-        )"
-    >
+        data-name="Rafka"
+
+onclick="openMemberProfile(
+    'Rafka',
+    'Panggilan Rafka',
+    'https://www.instagram.com/reiimaul?stkn=MWNiODF3OGF3N20zcA==',
+    'anggota18.jpeg'
+)"  >
 
     <h2>
         Rafka
@@ -834,7 +892,7 @@
 
         <button
             class="play-btn"
-            onclick="playMusic('music18', this)"
+            onclick="event.stopPropagation(); playMusic('music18', this)"
         >
             ▶ Play
         </button>
@@ -883,6 +941,65 @@
     </div>
 
 </div>
+<!-- PROFIL ANGGOTA -->
+<div
+    id="memberProfile"
+    class="member-profile"
+    onclick="closeMemberProfile(event)"
+>
 
+    <div
+        class="profile-box"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="profile-close"
+            onclick="closeMemberProfile()"
+        >
+            ×
+        </button>
+
+        <img
+            id="profilePhoto"
+            class="profile-photo"
+            src=""
+            alt="Foto Anggota"
+        >
+
+        <h2 id="profileName">
+            Nama Anggota
+        </h2>
+
+        <div class="profile-info">
+
+            <p>
+                <strong>Nama:</strong>
+                <span id="profileFullName"></span>
+            </p>
+
+            <p>
+                <strong>Panggilan:</strong>
+                <span id="profileNickname"></span>
+            </p>
+
+            <p>
+                <strong>Instagram:</strong>
+                <a
+                    id="profileInstagram"
+                    class="profile-instagram"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    @Instagram
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>
