@@ -1649,3 +1649,141 @@ footer {
         top: 15px;
     }
 }
+/* ================================
+   SEARCH ANGGOTA
+================================ */
+
+.member-search {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.member-search input {
+    width: 100%;
+    padding: 14px 18px;
+    box-sizing: border-box;
+
+    background: #000;
+    color: #fff;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.member-search input::placeholder {
+    color: #aaa;
+}
+
+
+/* ================================
+   PROFIL ANGGOTA
+================================ */
+
+.member-profile {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.member-profile.active {
+    display: flex;
+}
+
+.profile-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 400px;
+
+    background: #000;
+    color: #fff;
+
+    border: 1px solid #fff;
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    animation: profileShow 0.25s ease;
+}
+
+.profile-close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    background: none;
+    border: none;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid #fff;
+
+    display: block;
+
+    margin: 10px auto 20px;
+}
+
+.profile-info {
+    text-align: left;
+    line-height: 1.8;
+}
+
+.profile-info strong {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.profile-instagram {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.profile-instagram:hover {
+    opacity: 0.7;
+}
+
+@keyframes profileShow {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}

@@ -1426,3 +1426,169 @@ document.addEventListener(
 
     }
 );
+/* =================================
+   PROFIL ANGGOTA
+================================= */
+
+function openMemberProfile(
+    name,
+    nickname,
+    instagram,
+    photo
+) {
+
+    const profile =
+        document.getElementById("memberProfile");
+
+    const profilePhoto =
+        document.getElementById("profilePhoto");
+
+    const profileName =
+        document.getElementById("profileName");
+
+    const profileFullName =
+        document.getElementById("profileFullName");
+
+    const profileNickname =
+        document.getElementById("profileNickname");
+
+    const profileInstagram =
+        document.getElementById("profileInstagram");
+
+    if (!profile) return;
+
+    profileName.textContent = name;
+
+    profileFullName.textContent = name;
+
+    profileNickname.textContent = nickname;
+
+    profilePhoto.src = photo;
+
+    profilePhoto.alt = "Foto " + name;
+
+    profileInstagram.href = instagram;
+
+    try {
+
+        const username =
+            new URL(instagram)
+                .pathname
+                .replace(/\//g, "");
+
+        profileInstagram.textContent =
+            "@" + username;
+
+    } catch {
+
+        profileInstagram.textContent =
+            "Instagram";
+
+    }
+
+    profile.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* =================================
+   TUTUP PROFIL
+================================= */
+
+function closeMemberProfile(event) {
+
+    if (
+        event &&
+        event.target &&
+        event.target.id !== "memberProfile"
+    ) {
+        return;
+    }
+
+    const profile =
+        document.getElementById("memberProfile");
+
+    if (!profile) return;
+
+    profile.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* =================================
+   SEARCH ANGGOTA
+================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const searchInput =
+            document.getElementById("memberSearch");
+
+        if (!searchInput) return;
+
+        searchInput.addEventListener(
+            "input",
+            function () {
+
+                const keyword =
+                    this.value
+                        .toLowerCase()
+                        .trim();
+
+                const members =
+                    document.querySelectorAll(
+                        ".member-card"
+                    );
+
+                members.forEach(
+                    function (member) {
+
+                        const name =
+                            member.dataset.name
+                                ?.toLowerCase() || "";
+
+                        if (
+                            name.includes(keyword)
+                        ) {
+                            member.style.display = "";
+                        } else {
+                            member.style.display = "none";
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =================================
+   ESC UNTUK MENUTUP PROFIL
+================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key !== "Escape") return;
+
+        const profile =
+            document.getElementById(
+                "memberProfile"
+            );
+
+        if (!profile) return;
+
+        profile.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+);
