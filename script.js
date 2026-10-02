@@ -1521,52 +1521,28 @@ function closeMemberProfile(event) {
    SEARCH ANGGOTA
 ================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("memberSearch");
+    const memberCards = document.querySelectorAll(".member-card");
 
-        const searchInput =
-            document.getElementById("memberSearch");
+    if (!searchInput) return;
 
-        if (!searchInput) return;
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
 
-        searchInput.addEventListener(
-            "input",
-            function () {
+        memberCards.forEach(function (card) {
+            const name = card.querySelector("h2")?.textContent
+                .toLowerCase()
+                .trim() || "";
 
-                const keyword =
-                    this.value
-                        .toLowerCase()
-                        .trim();
-
-                const members =
-                    document.querySelectorAll(
-                        ".member-card"
-                    );
-
-                members.forEach(
-                    function (member) {
-
-                        const name =
-                            member.dataset.name
-                                ?.toLowerCase() || "";
-
-                        if (
-                            name.includes(keyword)
-                        ) {
-                            member.style.display = "";
-                        } else {
-                            member.style.display = "none";
-                        }
-
-                    }
-                );
-
+            if (name.includes(keyword)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
             }
-        );
-
-    }
-);
+        });
+    });
+});
 
 
 /* =================================
